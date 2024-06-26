@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* create account popup */
 
-document.addEventListener('DOMContentLoaded', function() {
   const overlayBackground = document.getElementById('overlay');
   const popupAppear = document.getElementById('popup');
   const closePopup = document.getElementById('close-popup-btn');
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
       overlayBackground.style.display = 'none';
       popupAppear.style.display = 'none';
   });
-});
 
 
 /* form for creating accounts */
