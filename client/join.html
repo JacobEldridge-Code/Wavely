@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer type="module"></script>
+    <script src="index.js" type="module" defer></script>
 </head>
 <body>
     <div id="join">
@@ -46,8 +46,8 @@
         <h6>Date of birth</h6>
         <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
 
-        <form>
-            <select name="months" id="months">
+        <form id="form">
+            <select name="months" id="months" required>
                 <option value="">Month</option>
                 <option value="January">January</option>
                 <option value="February">February</option>
@@ -63,11 +63,11 @@
                 <option value="December">December</option>
             </select>
 
-            <select name="day" id="day">
+            <select name="day" id="day" required>
                 <option value="">Date</option>
             </select>
 
-            <select name="year" id="year">
+            <select name="year" id="year" required>
                 <option value="">Year</option>
             </select>
         </form>
@@ -75,6 +75,7 @@
 
         <div class="button-container">
             <button id="close-popup-btn">Close</button>
+            <button id="submit-btn">Submit</button>
         </div>
     </div>
 </div>

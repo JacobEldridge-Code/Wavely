@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupAppear = document.getElementById('popup');
   const closePopup = document.getElementById('close-popup-btn');
   const createBtn = document.getElementById('create-btn');
+  const submitBtn = document.getElementById('submit-btn');
+  const userForm = document.getElementById('form')
 
   createBtn.addEventListener('click', function() {
       overlayBackground.style.display = 'block';
@@ -84,6 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
       overlayBackground.style.display = 'none';
       popupAppear.style.display = 'none';
   });
+  
+  userForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    redirect(); 
+});
+
+
+  submitBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    if (userForm.checkValidity()) {
+        userForm.submit(); // 
+    } else {
+        console.log("Form validation failed. Please fill out all required fields.");
+    }
+});
+
+function redirect() {
+    window.location = "../logged.html";
+}
+
+
 
 
 /* form for creating accounts */
@@ -99,7 +123,7 @@ for (let i = 1; i <= 31; i++) {
 
 const birthYear = document.getElementById('year');
 
-for (let i = 1950; i <= 2024; i++) {
+for (let i = 1980; i <= 2024; i++) {
   let option = document.createElement('option');
   option.value = i;
   option.textContent = i;
