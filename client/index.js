@@ -87,29 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
       popupAppear.style.display = 'none';
   });
   
-  userForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    redirect(); 
-});
-
-
   submitBtn.addEventListener('click', function(event) {
     event.preventDefault();
     
     if (userForm.checkValidity()) {
-        userForm.submit(); // 
+        userForm.submit();
+        window.location = "../logged.html"; 
     } else {
         console.log("Form validation failed. Please fill out all required fields.");
     }
 });
 
-function redirect() {
-    window.location = "../logged.html";
-}
-
-
-
-
+ 
 /* form for creating accounts */
 
 const birthDay = document.getElementById('day')
