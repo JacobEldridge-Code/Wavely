@@ -118,3 +118,13 @@ for (let i = 1980; i <= 2024; i++) {
   option.textContent = i;
   birthYear.appendChild(option);
 }
+
+/* log out popup */
+
+const logOutElement = document.getElementById('logging-out');
+const leftUserAccountElement = document.getElementById('wavely-left-user');
+const njqewfbqwbfqw = document.querySelector('.wavely-left-user-left')
+
+njqewfbqwbfqw.addEventListener('click', function() {
+  console.log("hello shanw");
+});

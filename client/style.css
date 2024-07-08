@@ -224,15 +224,15 @@ form > select {
     width: 100%;
     height: 100vh;
     color: lightgray;
-    gap: 40px;
+    gap: 30px;
 }
 
 #wavely-left {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
-    height: 95vh;
+    margin-top: 10px;
+    height: 98vh;
     padding: 10px;
 }
 
@@ -280,11 +280,38 @@ form > select {
     color: inherit;
 }
 
-.wavely-left-user {
+#wavely-left-user {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     margin-top: auto;
+    transition: 0.2s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+#logging-out {
+    display: none;
+    border: 1px solid gray;
+    padding: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 
+    0 0 10px rgba(52, 152, 219, 0.8),
+    0 0 20px rgba(52, 152, 219, 0.6),
+    0 0 30px rgba(52, 152, 219, 0.4),
+    0 0 40px rgba(52, 152, 219, 0.2);
+    margin-top: 0 auto;
+}
+
+.logging-out:hover {
+    background-color: rgb(132, 131, 131);
+}
+
+#wavely-left-user:hover {
+    background-color: rgb(132, 131, 131);
 }
 
 .wavely-left-user-left {
@@ -308,7 +335,8 @@ form > select {
 /* middle media section */
 
 #wavely-middle {
-    width: 30%;
+    width: 35%;
+    display: none;
     border: 1px solid lightgray;
 }
 
@@ -321,6 +349,42 @@ form > select {
     cursor: pointer;
 }
 
+
+
+/* right section */
+
+#wavely-right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 10px;
+    display: none;
+}
+
+.wavely-right-btn > button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: rgb(109, 109, 109);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 180px 10px 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.who-to-follow {
+    border: .5px solid lightgray;
+    padding: 15px;
+    height: 300px;
+}
+
+.who-to-follow > span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
 
 /* media query for phone */
 
